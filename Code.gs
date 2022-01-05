@@ -22,7 +22,7 @@ const coinPrice = async() =>{
     const cmcMapData = cmcMap.data;
 
     myGoogleSheet.clearContents();
-    myGoogleSheet.appendRow(["Rank", "Name(Symbol)", "Price", "24h %", "7h %"]);
+    myGoogleSheet.appendRow(["Rank", "Name(Symbol)", "Price", "24h %", "7d %"]);
     for(let i=0; i < 100; i++){
       const price = cmcMapData[i].quote.USD.price,
             percent24 = cmcMapData[i].quote.USD.percent_change_24h,
